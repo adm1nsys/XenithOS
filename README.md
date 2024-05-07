@@ -139,8 +139,8 @@ To Setup bord in program use this instraction:<br>
 <img src="https://github.com/adm1nsys/XenithOS/blob/main/ESP%208266/ideaspark/Assets%20to%20setup/setup.png?raw=true" />
 This instruction is the same for all OS. Only the buttons can be located/look different.
 
-<h1 id="ESP_8266_ideaspark_connect_pins">ESP 8266 ideaspark Connection Types (Pins):</h1>
-<h2 id="ESP_8266_ideaspark_connect_type_1">Type 1:</h2>
+<h2 id="ESP_8266_ideaspark_connect_pins">ESP 8266 ideaspark Connection Types (Pins):</h2>
+<h3 id="ESP_8266_ideaspark_connect_type_1">Type 1:</h3>
 <b>Actual for:</b>
 <ul>
   <li>Version 1 Beta 1</li>
@@ -157,9 +157,19 @@ This instruction is the same for all OS. Only the buttons can be located/look di
   <td>Top/Back To Menu</td>
 </tr>
 <tr>
+  <td>G (GND)</td>
+  <td>Button 1 Pin 2</td>
+  <td>-</td>
+</tr>
+<tr>
   <td>D2</td>
   <td>Button 2 Pin 1</td>
   <td>Botton</td>
+</tr>
+<tr>
+  <td>G (GND)</td>
+  <td>Button 2 Pin 2</td>
+  <td>-</td>
 </tr>
 <tr>
   <td>Flash</td>
@@ -167,12 +177,12 @@ This instruction is the same for all OS. Only the buttons can be located/look di
   <td>Apply</td>
 </tr>
 </table>
-<br>
-<br>
+
+<hr>
 
 
 
-
+<br><br><br><br>
 ---------
 <h1>ESP 8266 ideaspark Flash and connection:</h1>
 <h2>Beta 1</h2>
