@@ -21,12 +21,12 @@ Operation system for boards. The Operating System allows you to use the board as
 <a href="#">Conect to Computer</a>
 <br><br>
     <h3>Rasberry Pi</h3>
-<li>Rasberry Pi Pico</li>
+<li><b>Rasberry Pi Pico</b></li>
 <a href="#Rasberry_Pi_Pico_table">Release Table</a><br>
 <a href="#">Pinout</a><br>
 <a href="#">Conect to Computer</a>
 <br><br>
-<li>Rasberry Pi Zero</li>
+<li><b>Rasberry Pi Zero</b></li>
 <a href="#Rasberry_Pi_Zero_table">Release Table</a><br>
 <a href="#">Pinout</a><br>
 <a href="#">Conect to Computer</a>
@@ -43,7 +43,7 @@ Operation system for boards. The Operating System allows you to use the board as
   <th>Release Data</th>
 </tr>
 <tr>
-  <td>Version 1 Beta 1</td>
+  <td><a href="#">Version 1 Beta 1</a></td>
   <td>Type 1</td>
   <td>2024 5 May</td>
 </tr>
