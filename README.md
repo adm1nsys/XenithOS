@@ -7,7 +7,7 @@ Operation system for boards. The Operating System allows you to use the board as
   <h3>ESP</h3>
 <li><b>ESP 8266 ideaspark</b></li>
 <a href="#ESP8266_ideaspark_table">Release Table</a><br>
-<a href="#">Pinout</a><br>
+<a href="#ESP_8266_ideaspark_pinout">Pinout</a><br>
 <a href="#">Conect to Computer</a>
 <br><br>
 <li><b>ESP 8266 (regular)</b></li>
@@ -111,7 +111,7 @@ Operation system for boards. The Operating System allows you to use the board as
 
 
 <h1>ESP 8266 ideaspark Content:</h1>
-<h2>Pinout:</h2>
+<h2 id="ESP_8266_ideaspark_pinout">Pinout:</h2>
 The pinout of the <b>ESP 8266 ideaspark</b> board is different from the regular <b>ESP 8266</b>. <b>Be careful!</b> <br>
 <h3>Pinout Scheme:</h3>
 <a href="https://www.aliexpress.com/item/1005005242283189.html?spm=a2g0o.productlist.main.3.3168W6AxW6Axbw&algo_pvid=109215a9-0e73-441b-b943-0d5ab0e12670&algo_exp_id=109215a9-0e73-441b-b943-0d5ab0e12670-1&pdp_npi=4%40dis%21UAH%21187.67%21175.92%21%21%214.63%214.34%21%4021164c9c17147468046175847e05e1%2112000032335054938%21sea%21UA%210%21AB&curPageLogUid=6lCsG9jNPfbw&utparam-url=scene%3Asearch%7Cquery_from%3A" target="_blank">Image Original Source</a> |
