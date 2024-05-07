@@ -1,14 +1,94 @@
 # XenithOS
 Operation system for boards. The Operating System allows you to use the board as a security key. 
 <hr>
-<h1>About Support Boards:</h1>
-ESP 8266 ideaspark: <b>Yes</b>.<br>
-Beta 1<br>
-<br>
-ESP 8266 (regular): <b>Soon</b>.<br><br>
-ESP 32: <b>Soon</b>.<br><br>
-Rasberry Pi Pico: <b>Soon</b>.<br><br>
-Rasberry Pi Zero: <b>Soon</b>.
+<h1>Boards Support:</h1>
+
+<ul>
+  <h3>ESP</h3>
+<li><a href="#ESP8266_ideaspark_table">ESP 8266 ideaspark</a></li>
+<li><a href="#ESP8266_regular_table">ESP 8266 (regular)</a></li>
+<li><a href="#ESP32_table">ESP 32</a></li>
+    <h3>Rasberry Pi</h3>
+<li><a href="#Rasberry_Pi_Pico_table">Rasberry Pi Pico</a></li>
+<li><a href="#Rasberry_Pi_Zero_table">Rasberry Pi Zero</a></li>
+</ul>
+
+<!-- ESP8266 ideaspark table -->
+
+<table id="ESP8266_ideaspark_table">
+<tr>
+  <th>ESP8266 (ideaspark)</th>
+  <th>Connection Type</th>
+  <th>Release Data</th>
+</tr>
+<tr>
+  <td>Beta 1</td>
+  <td>Type 1</td>
+  <td>2024 5 May</td>
+</tr>
+</table>
+
+<!-- ESP8266 regular table -->
+
+<table id="ESP8266_regular_table">
+<tr>
+  <th>ESP8266 (regular)</th>
+  <th>Connection Type</th>
+  <th>Release Data</th>
+</tr>
+<tr>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+</table>
+
+<!-- ESP32 table -->
+
+<table id="ESP32_table">
+<tr>
+  <th>ESP32</th>
+  <th>Connection Type</th>
+  <th>Release Data</th>
+</tr>
+<tr>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+</table>
+
+<!-- Rasberry Pi Pico table -->
+
+<table id="Rasberry_Pi_Pico_table">
+<tr>
+  <th>Rasberry Pi Pico</th>
+  <th>Connection Type</th>
+  <th>Release Data</th>
+</tr>
+<tr>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+</table>
+
+<!-- Rasberry Pi Zero table -->
+
+<table id="Rasberry_Pi_Zero_table">
+<tr>
+  <th>Rasberry Pi Zero</th>
+  <th>Connection Type</th>
+  <th>Release Data</th>
+</tr>
+<tr>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+</table>
+
+
 <h1>ESP 8266 ideaspark Flash and connection:</h1>
 <h2>Beta 1</h2>
 To install XenithOS or XenOS an setup it Use Arduino ide. 
