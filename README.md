@@ -6,7 +6,7 @@ Operation system for boards. The Operating System allows you to use the board as
 <ul>
   <h3>ESP</h3>
 <li>ESP 8266 ideaspark</li>
-<a href="#ESP8266_ideaspark_table">Release Table</a>
+<a href="#ESP8266_ideaspark_table">Release Table</a><br>
 <a href="#ESP8266_pinout">Pinout</a><br>
 <a href="#ESP8266_pinout">Conect to Computer</a>
 <br><br>
