@@ -35,25 +35,44 @@ Operation system for boards. The Operating System allows you to use the board as
 <h1>Support Release Tables:</h1>
 
 <!-- ESP8266 ideaspark table -->
+<h3>ESP8266 (ideaspark)</h3>
 
 <table id="ESP8266_ideaspark_table">
 <tr>
-  <th>ESP8266 (ideaspark)</th>
+  <th>OS Version</th>
   <th><a href="#ESP_8266_ideaspark_connect_pins">Connection Type</a></th>
   <th>Release Data</th>
 </tr>
 <tr>
-  <td><a href="#">Version 1 Beta 1</a></td>
+  <td><a href="#esp8266_ideaspark_version1_beta1">Version 1 Beta 1</a></td>
   <td><a href="#ESP_8266_ideaspark_connect_type_1">Type 1</a></td>
   <td>2024 5 May</td>
 </tr>
 </table>
+<table>
+<tr>
+  <th>OS Version</th>
+  <th><a href="https://en.wikipedia.org/wiki/Time-based_one-time_password">TOTP/OTP</a></th>
+  <th><a href="">Fido2</a></th>
+  <th><a href="">U2F</a></th>
+  <th><a href="">WebAuthn</a></th>
+</tr>
+<tr>
+  <td><a href="#esp8266_ideaspark_version1_beta1">Version 1 Beta 1</a></td>
+  <td>1 Key</td>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+</table>
+
+<br>
 
 <!-- ESP8266 regular table -->
-
+<h3>ESP8266 (regular)</h3>
 <table id="ESP8266_regular_table">
 <tr>
-  <th>ESP8266 (regular)</th>
+  <th>OS Version</th>
   <th>Connection Type</th>
   <th>Release Data</th>
 </tr>
@@ -63,12 +82,30 @@ Operation system for boards. The Operating System allows you to use the board as
   <td>❌</td>
 </tr>
 </table>
+<table>
+<tr>
+  <th>OS Version</th>
+  <th><a href="https://en.wikipedia.org/wiki/Time-based_one-time_password">TOTP/OTP</a></th>
+  <th><a href="">Fido2</a></th>
+  <th><a href="">U2F</a></th>
+  <th><a href="">WebAuthn</a></th>
+</tr>
+<tr>
+  <td><a href="#">❌</a></td>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+</table>
+
+<br>
 
 <!-- ESP32 table -->
-
+<h3>ESP32</h3>
 <table id="ESP32_table">
 <tr>
-  <th>ESP32</th>
+  <th>OS Version</th>
   <th>Connection Type</th>
   <th>Release Data</th>
 </tr>
@@ -78,12 +115,30 @@ Operation system for boards. The Operating System allows you to use the board as
   <td>❌</td>
 </tr>
 </table>
+<table>
+<tr>
+  <th>OS Version</th>
+  <th><a href="https://en.wikipedia.org/wiki/Time-based_one-time_password">TOTP/OTP</a></th>
+  <th><a href="">Fido2</a></th>
+  <th><a href="">U2F</a></th>
+  <th><a href="">WebAuthn</a></th>
+</tr>
+<tr>
+  <td><a href="#">❌</a></td>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+</table>
+
+<br>
 
 <!-- Rasberry Pi Pico table -->
-
+<h3>Rasberry Pi Pico</h3>
 <table id="Rasberry_Pi_Pico_table">
 <tr>
-  <th>Rasberry Pi Pico</th>
+  <th>OS Version</th>
   <th>Connection Type</th>
   <th>Release Data</th>
 </tr>
@@ -93,16 +148,50 @@ Operation system for boards. The Operating System allows you to use the board as
   <td>❌</td>
 </tr>
 </table>
+<table>
+<tr>
+  <th>OS Version</th>
+  <th><a href="https://en.wikipedia.org/wiki/Time-based_one-time_password">TOTP/OTP</a></th>
+  <th><a href="">Fido2</a></th>
+  <th><a href="">U2F</a></th>
+  <th><a href="">WebAuthn</a></th>
+</tr>
+<tr>
+  <td><a href="#">❌</a></td>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+</table>
+
+<br>
 
 <!-- Rasberry Pi Zero table -->
-
+<h3>Rasberry Pi Zero</h3>
 <table id="Rasberry_Pi_Zero_table">
 <tr>
-  <th>Rasberry Pi Zero</th>
+  <th>OS Version</th>
   <th>Connection Type</th>
   <th>Release Data</th>
 </tr>
 <tr>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+</table>
+<table>
+<tr>
+  <th>OS Version</th>
+  <th><a href="https://en.wikipedia.org/wiki/Time-based_one-time_password">TOTP/OTP</a></th>
+  <th><a href="">Fido2</a></th>
+  <th><a href="">U2F</a></th>
+  <th><a href="">WebAuthn</a></th>
+</tr>
+<tr>
+  <td><a href="#">❌</a></td>
+  <td>❌</td>
   <td>❌</td>
   <td>❌</td>
   <td>❌</td>
