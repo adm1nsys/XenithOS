@@ -1,5 +1,6 @@
 # XenithOS
 Operation system for boards. The Operating System allows you to use the board as a security key. 
+theme: jekyll-theme-minimal
 <hr>
 <h1>Boards Support:</h1>
 
