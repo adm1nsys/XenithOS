@@ -44,7 +44,7 @@ Operation system for boards. The Operating System allows you to use the board as
 </tr>
 <tr>
   <td><a href="#">Version 1 Beta 1</a></td>
-  <td>Type 1</td>
+  <td><a href="#">Type 1</a></td>
   <td>2024 5 May</td>
 </tr>
 </table>
