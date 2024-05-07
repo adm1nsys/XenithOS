@@ -26,7 +26,7 @@ Operation system for boards. The Operating System allows you to use the board as
   <th>Release Data</th>
 </tr>
 <tr>
-  <td>Beta 1</td>
+  <td>Version 1 Beta 1</td>
   <td>Type 1</td>
   <td>2024 5 May</td>
 </tr>
