@@ -8,7 +8,7 @@ Operation system for boards. The Operating System allows you to use the board as
 <li><a href="#ESP8266_ideaspark_table">ESP 8266 ideaspark</a></li>
 <a href="#ESP8266_pinout">Pinout</a><br>
 <a href="#ESP8266_pinout">Conect to Computer</a>
-<br>
+<br><br>
 <li><a href="#ESP8266_regular_table">ESP 8266 (regular)</a></li>
 <li><a href="#ESP32_table">ESP 32</a></li>
     <h3>Rasberry Pi</h3>
