@@ -218,3 +218,16 @@ D1(pin) Button: Action top in menu or back to menu.<br>
 D2(pin) Button: Action bottom in menu.<br>
 Flash Button (on board): Action apply (open item in menu).<br>
 <hr>
+
+
+<h1>ESP 8266 (regular) Content:</h1>
+<h3>Soon</h3>
+
+<h1>ESP 32 Content:</h1>
+<h3>Soon</h3>
+
+<h1>Rasberry Pi Pico Content:</h1>
+<h3>Soon</h3>
+
+<h1>Rasberry Pi Zero Content:</h1>
+<h3>Soon</h3>
