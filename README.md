@@ -479,4 +479,4 @@ Flash Button or G3 (on board or pin): Action sleep/wake up board.<br>
 <h3>Soon</h3>
 
 <h1 id="infinity_keys">Infinity Ketys:</h1>
-<h3>You can't actually load infinity keys. You will most likely encounter problems in the 10,000+ range. This limitation is hardware-based because the board's memory is not infinite. For example, ESPs on average have 4 megabytes of internal memory.</h3>
+<h3>You can't actually load infinity keys. You will most likely encounter problems in the 10,000+ range. This limitation is hardware-based because the board's memory is not infinite. For example, ESPs on average have 4 megabytes of internal memory. But it is unlikely that you will store more than 50 Keys on one device. It's too risky.</h3>
