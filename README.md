@@ -48,6 +48,11 @@ Operation system for boards. The Operating System allows you to use the board as
   <td><a href="#ESP_8266_ideaspark_connect_type_1">Type 1</a></td>
   <td>2024 5 May</td>
 </tr>
+  <tr>
+  <td><a href="#esp8266_ideaspark_version1_beta2RC">Version 1 Beta 2 RC</a></td>
+  <td><a href="#ESP_8266_ideaspark_connect_type_2a">Type 2a</a></td>
+  <td>2024 18 May</td>
+</tr>
 </table>
 <table>
 <tr>
@@ -60,6 +65,13 @@ Operation system for boards. The Operating System allows you to use the board as
 <tr>
   <td><a href="#esp8266_ideaspark_version1_beta1">Version 1 Beta 1</a></td>
   <td>1 Key</td>
+  <td>❌</td>
+  <td>❌</td>
+  <td>❌</td>
+</tr>
+  <tr>
+<td><a href="#esp8266_ideaspark_version1_beta2RC">Version 1 Beta 2RC</a></td>
+  <td><a href="#infinity_keys">Infinity Keys</a></td>
   <td>❌</td>
   <td>❌</td>
   <td>❌</td>
@@ -232,7 +244,7 @@ This instruction is the same for all OS. Only the buttons can be located/look di
 <h3 id="ESP_8266_ideaspark_connect_type_1">Type 1:</h3>
 <b>Actual for:</b>
 <ul>
-  <li>Version 1 Beta 1</li>
+  <li><a href="#esp8266_ideaspark_version1_beta1">Version 1 Beta 1</a></li>
 </ul>
 <table>
 <tr>
@@ -268,6 +280,75 @@ This instruction is the same for all OS. Only the buttons can be located/look di
 </table>
 
 <hr>
+
+<h3 id="ESP_8266_ideaspark_connect_type_2a">Type 2a:</h3>
+<b>Actual for:</b>
+<ul>
+  <li><a href="#esp8266_ideaspark_version1_beta2RC">Version 1 Beta 2RC</a></li>
+  <li><a href="#esp8266_ideaspark_version1">Version 1</a></li>
+</ul>
+<table>
+<tr>
+  <th>Board</th>
+  <th>Pereferial</th>
+  <th>Action</th>
+</tr>
+<tr>
+  <td>D1</td>
+  <td>Button 1 Pin 1</td>
+  <td>Top in Menu or Previous Page</td>
+</tr>
+<tr>
+  <td>G (GND)</td>
+  <td>Button 1 Pin 2</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>D2</td>
+  <td>Button 2 Pin 1</td>
+  <td>Bottom in Menu or Next Page</td>
+</tr>
+<tr>
+  <td>G (GND)</td>
+  <td>Button 2 Pin 2</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>C4</td>
+  <td>Button 3 Pin 1</td>
+  <td>Home</td>
+</tr>
+<tr>
+  <td>G (GND)</td>
+  <td>Button 3 Pin 2</td>
+  <td>-</td>
+</tr>
+  <tr>
+  <td>D7</td>
+  <td>Button 4 Pin 1</td>
+  <td>Apply</td>
+</tr>
+<tr>
+  <td>G (GND)</td>
+  <td>Button 4 Pin 2</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>Flash or G3</td>
+  <td>On Board</td>
+  <td>Sleep or Wake Up</td>
+</tr>
+</table>
+
+<p>The connection is not consistent (D0..C4) due to the unstable behavior of the board specifically on some pins. This may just be my problem. However, I decided to avoid using these unstable pins to ensure users do not encounter similar issues. Additionally, I observed artifacts on the screen when using some of these pins.</p>
+<h3>Artifacts Example</h3>
+<img src="https://github.com/adm1nsys/XenithOS/blob/main/ESP%208266/ideaspark/Assets%20to%20setup/IMG_2465.JPG?raw=true" width="300px"/>
+<h3>Connection</h3>
+<img src="https://github.com/adm1nsys/XenithOS/blob/main/ESP%208266/ideaspark/Assets%20to%20setup/IMG_2467.jpg?raw=true" width="300px"/>
+<hr>
+
+
+
 <h2 id="esp8266_ideaspark_versions">Versions:</h2>
 <h3 id="esp8266_ideaspark_version1_beta1">Version 1 Beta 1:</h3>
 <b>⚠️ Note ⚠️:</b><br>
@@ -307,7 +388,83 @@ D1(pin) Button: Action top in menu or back to menu.<br>
 D2(pin) Button: Action bottom in menu.<br>
 Flash Button (on board): Action apply (open item in menu).<br>
 <hr>
+<h3 id="esp8266_ideaspark_version1_beta2RC">Version 1 Beta 2RC:</h3>
+<b>⚠️ Note ⚠️:</b><br>
+This is a Release Candidate version. There may be minor Bugs.
+<br><br>
+<b>🛠️ Bugs 🛠️:</b>
+<ol>
+  <li>Not found at this time.</li>
+</ol>
+<b>Released:</b><br>
+2024 18 May<br><br>
+<b>Connection Type:</b><br>
+<a href="https://adm1nsys.github.io/XenithOS/#ESP_8266_ideaspark_connect_type_2a">Type 2a</a><br><br>
+<b>XenithOS.ino:</b><br>
+<a href="https://raw.githubusercontent.com/adm1nsys/XenithOS/main/ESP%208266/ideaspark/Version%201%20Beta%202%20RC/XenithOS/XenithOS.ino" target="_blank">Raw</a><br>
+<a href="https://github.com/adm1nsys/XenithOS/blob/main/ESP%208266/ideaspark/Version%201%20Beta%202%20RC/XenithOS/XenithOS.ino" target="_blank">Download</a><br><br>
+<b>XenithOS.cpp:</b><br>
+<a href="https://raw.githubusercontent.com/adm1nsys/XenithOS/main/ESP%208266/ideaspark/Version%201%20Beta%202%20RC/XenithOS.cpp" target="_blank">Raw</a><br>
+<a href="https://github.com/adm1nsys/XenithOS/blob/main/ESP%208266/ideaspark/Version%201%20Beta%202%20RC/XenithOS.cpp" target="_blank">Download</a><br>
+<h3>Setup Software:</h3>
+Coppy code to Arduino ide, read instruction on line 28, or read it here: <br>
+<div style="border: 1px solid; padding: 10px; width: 500px;">
+  <h3>1. Wi-Fi Networks</h3>
+  <ul>
+    <li>Paste the Wi-Fi name in the first area <code>""</code>.</li>
+    <li>Paste the Wi-Fi password in the second area <code>""</code>.</li>
+    <li>You can add and remove networks, using one or multiple networks.</li>
+    <li>Do not lose the <code>","</code> after <code>{"Network Name", "Password"}</code>.
+      <ul>
+        <li>The correct format is <code>{"Network Name", "Password"},</code>.</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>2. Time Servers</h3>
+  <ul>
+    <li>Uncomment one of the following lines to use it for time synchronization.</li>
+    <li>Remove or add <code>//</code> before the line to select the time server.</li>
+  </ul>
+  <h3>3. TOTP Keys and Titles</h3>
+  <ul>
+    <li>The first area <code>""</code> is the title/name of the service in the menu.</li>
+    <li>You can name it as you wish: MyMeta, Instagram5, @_name_, etc.</li>
+    <li>Do not use <code>\</code>, <code>"</code>, or <code>'</code> in the title unless you properly escape them.</li>
+    <li>It is recommended to use letters (Aa-Zz) and numbers (0-9) in the title.</li>
+    <li>When you obtain your TOTP Key for generation, it may have a format like this: X00X 00XX 0XXX XXXX.
+      <ul>
+        <li>Remove spaces to get the correct format: X00X00XX0XXXXXXX. After that, paste the code into the second area <code>""</code>.</li>
+      </ul>
+    </li>
+    <li>Similar to Wi-Fi Networks, do not forget the <code>","</code>.</li>
+  </ul>
+  <h3>4. Apps in Menu</h3>
+  <ul>
+    <li>You can add or edit the app names/list/content.</li>
+  </ul>
+  <h4>4.1 Edit App List</h4>
+  <ul>
+    <li>To add an app to the list, modify the array similar to Wi-Fi or TOTP. Add the app in the format <code>{"App name", AppView},</code>.
+      <ul>
+        <li>After that, add <code>void AppView();</code> before the array.</li>
+        <li>Then, develop or add the app.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+ <br>
 
+
+<h3>Status Bar:</h3>
+<p>The status bar has been redesigned and moved to the top. If there are problems with the Internet connection or time synchronization, you will see a triangular icon with “!” at the top right. You should check the Internet availability or run diagnostics in the "Diagnostic" application. Also there you will see the name or title of the application, service or menu.</p>
+
+<h3>Navigation:</h3>
+D1(pin) Button: Action top in menu or back to menu.<br>
+D2(pin) Button: Action bottom in menu.<br>
+D3(pin) Button: Action go Home in Menu.<br>
+D7(pin) Button: Action Apply or open application.<br>
+Flash Button or G3 (on board or pin): Action sleep/wake up board.<br>
+<hr>
 
 <h1>ESP 8266 (regular) Content:</h1>
 <h3>Soon</h3>
