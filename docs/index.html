@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>XenithOS — adm1nsys</title>
+    <meta name="description" content="A TOTP two-factor code generator on an ESP8266 board with a 0.96-inch OLED: menu, several accounts and Wi-Fi networks, NTP time sync.">
+    <meta name="theme-color" content="#070707" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/adm1nsys/assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="/adm1nsys/assets/css/style.css">
+    <link rel="stylesheet" href="/adm1nsys/kit/project.css">
+    <style>
+      .board { margin: 0 0 1rem; max-width: 360px; }
+      .board img { width: 100%; height: auto; display: block; border-radius: 12px; }
+      .board figcaption { margin-top: .5rem; font-size: .85rem; color: var(--muted); }
+      .warn { border-left: 3px solid #e5484d; padding-left: 1rem; }
+    </style>
+  </head>
+  <body>
+    <div class="backdrop backdrop-short" aria-hidden="true"></div>
+
+    <main class="wrap">
+      <header class="page-head">
+        <p class="eyebrow">ESP8266 · OLED · TOTP</p>
+        <h1>XenithOS</h1>
+        <p class="lead" data-i18n="lead"></p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/adm1nsys/XenithOS/archive/refs/heads/main.zip">
+            <span data-i18n="download"></span>
+          </a>
+          <a class="btn" href="#flash" data-i18n="flashBtn"></a>
+          <a class="btn btn-ghost" href="https://github.com/adm1nsys/XenithOS" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <p class="meta" data-i18n="meta"></p>
+      </header>
+
+      <div class="folds">
+        <details class="card fold" open>
+          <summary><span data-i18n="whatTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-i18n-html="whatBody"></div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="hwTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body">
+            <figure class="board"><img src="img/board-menu.jpg" data-i18n-alt="photoAlt" width="1200" height="1200"><figcaption data-i18n="photoCap"></figcaption></figure>
+            <p data-i18n-html="hwBody"></p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th data-i18n="thPin"></th><th data-i18n="thButton"></th></tr></thead>
+                <tbody>
+                  <tr><td>D1</td><td data-i18n="bUp"></td></tr>
+                  <tr><td>D2</td><td data-i18n="bDown"></td></tr>
+                  <tr><td>C4 (D4)</td><td data-i18n="bHome"></td></tr>
+                  <tr><td>D7</td><td data-i18n="bOpen"></td></tr>
+                  <tr><td>FLASH · G3 (D3)</td><td data-i18n="bSleep"></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-i18n="hwNote"></p>
+          </div>
+        </details>
+
+        <details class="card fold" id="flash">
+          <summary><span data-i18n="flashTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body">
+            <div data-i18n-html="flashBody"></div>
+<pre><code>arduino-cli core install esp8266:esp8266 --additional-urls https://arduino.esp8266.com/stable/package_esp8266com_index.json
+arduino-cli lib install U8g2 NTPClient Time "TOTP library" Base32-Decode
+arduino-cli compile --upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 firmware/XenithOS</code></pre>
+          </div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="cfgTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body">
+            <p data-i18n-html="cfgIntro"></p>
+<pre><code>// Wi-Fi networks — the first one that answers is used
+{"Network1", "Password1"},
+{"Network2", "Password2"},
+
+// accounts: name in the menu, Base32 secret without spaces
+{"GitHub", "JBSWY3DPEHPK3PXP"},
+{"Mail",   "KRSXG5CTMVRXEZLU"},</code></pre>
+            <div data-i18n-html="cfgBody"></div>
+          </div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="secTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body warn" data-i18n-html="secBody"></div>
+        </details>
+
+        <details class="card fold" id="versions" open>
+          <summary><span data-i18n="versionsTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body">
+            <p data-i18n="versionsIntro"></p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th data-i18n="thVersion"></th><th data-i18n="thDate"></th><th data-i18n="thChanges"></th><th></th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Beta 2 RC</strong></td><td data-i18n="d2"></td><td data-i18n="c2"></td><td><a class="btn btn-sm" href="https://raw.githubusercontent.com/adm1nsys/XenithOS/main/firmware/XenithOS/XenithOS.ino" download="XenithOS.ino">XenithOS.ino</a></td></tr>
+                  <tr><td>Beta 1</td><td data-i18n="d1"></td><td data-i18n="c1"></td><td><a class="btn btn-sm" href="https://raw.githubusercontent.com/adm1nsys/XenithOS/main/firmware/beta-1/XenithOS/XenithOS.ino" download="XenithOS-beta-1.ino">XenithOS.ino</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </div>
+    </main>
+
+    <script>
+      const REPO = 'https://github.com/adm1nsys/XenithOS';
+      const file = (path, label = path) => `<a href="${REPO}/blob/main/${path}" target="_blank" rel="noopener"><code>${label}</code></a>`;
+      window.PROJECT = {
+        repo: 'adm1nsys/XenithOS',
+        license: 'GPL-3.0',
+        langs: ['de', 'en'],
+        i18n: {
+          de: {
+            lead: 'Ein Generator für Zwei-Faktor-Codes (TOTP) auf einem ESP8266-Board mit eingebautem 0,96″-OLED — die sechsstelligen Codes einer Authenticator-App, auf einem kleinen Gerät mit eigenen Tasten, Menü und Statusleiste.',
+            download: 'Code herunterladen',
+            flashBtn: 'Flashen',
+            meta: 'Arduino · C++ · ESP8266 · GPL-3.0',
+            photoAlt: 'XenithOS auf dem ESP8266-OLED-Board, Bildschirm „System“',
+            whatTitle: 'Was es kann',
+            photoCap: 'Die App „System“: Version, Board und Verkabelung',
+            whatBody: `<ul><li><strong>TOTP-Codes</strong> für so viele Konten, wie in den Speicher passen — jedes mit eigenem Namen im Menü und einem Countdown bis zum nächsten Code.</li><li><strong>Zeit aus dem Netz:</strong> verbindet sich mit dem ersten erreichbaren von mehreren WLANs und stellt die Uhr per NTP — ohne genaue Zeit kein gültiger Code.</li><li><strong>Statusleiste</strong> mit Warnsymbol, wenn WLAN oder Zeitabgleich fehlen.</li><li><strong>Apps</strong> im selben Menü: <em>Diagnostic</em>, <em>System</em>, <em>Reboot</em> und <em>NO WAR</em> mit Links zu ukrainischen Hilfsfonds.</li><li><strong>Ruhemodus</strong> per Tastendruck, ein Startbildschirm mit Fortschritt — und ein Menü, das sich leicht um eigene Apps erweitern lässt.</li></ul>`,
+            hwTitle: 'Hardware und Verkabelung',
+            hwBody: 'Das ESP8266-Entwicklungsboard mit 0,96″-SSD1306-OLED (verkauft als „ideaspark“ und unter anderen Namen; ESP-12-Modul, Micro-USB). Die Belegung weicht vom gewöhnlichen NodeMCU ab: das Display hängt an GPIO 12 (SDA) und GPIO 14 (SCL). Dazu vier Taster, jeweils zwischen Pin und GND — die internen Pull-ups reichen, Widerstände sind nicht nötig.',
+            thPin: 'Pin (Beschriftung)', thButton: 'Taste',
+            bUp: 'hoch im Menü / vorige Seite', bDown: 'runter im Menü / nächste Seite', bHome: 'Startseite', bOpen: 'öffnen / übernehmen', bSleep: 'Ruhemodus / aufwecken',
+            hwNote: 'D0, D5, D6 und D8 habe ich gemieden: Tasten dort machten auf meinem Board den Eingang instabil und hinterließen Artefakte auf dem Display.',
+            flashTitle: 'Bauen und flashen',
+            flashBody: `<ol><li>Die <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener">Arduino IDE</a> installieren und den ESP8266-Core hinzufügen: unter <em>Einstellungen → Zusätzliche Boardverwalter-URLs</em> <code>https://arduino.esp8266.com/stable/package_esp8266com_index.json</code> eintragen, dann <strong>esp8266</strong> im Boardverwalter installieren.</li><li>Die Bibliotheken installieren: <strong>U8g2</strong>, <strong>NTPClient</strong>, <strong>Time</strong>, <strong>TOTP library</strong> (Luca Dentella) und <strong>Base32-Decode</strong>.</li><li>${file('firmware/XenithOS/XenithOS.ino')} öffnen, WLANs und Konten eintragen (siehe unten), Board <strong>NodeMCU 1.0 (ESP-12E Module)</strong> und Port wählen, hochladen.</li></ol><p>Oder auf der Kommandozeile:</p>`,
+            cfgTitle: 'Einrichten',
+            cfgIntro: 'Alles wird vor dem Flashen im Sketch eingetragen; die Anleitung steht auch im Kommentarblock am Anfang der Datei.',
+            cfgBody: `<ul><li>Das Geheimnis ist der Textcode, den ein Dienst beim Einrichten der Zwei-Faktor-Anmeldung neben dem QR-Code zeigt — ohne Leerzeichen, bis zu 32 Zeichen.</li><li>NTP-Server ist <code>pool.ntp.org</code>; ein zweiter ist als Kommentar vorbereitet.</li><li>Eigene Apps: <code>{"Name", FunctionView}</code> in <code>additionalMenuItems</code> eintragen und die Funktion schreiben.</li></ul><p>Einen fertigen Firmware-Download gibt es deshalb nicht: WLAN-Passwörter und Geheimnisse werden mit hineinkompiliert, jede Firmware ist persönlich.</p>`,
+            secTitle: 'Sicherheit',
+            secBody: `<p>Ein Lernprojekt, kein Hardware-Sicherheitsschlüssel:</p><ul><li>Die Geheimnisse stehen im Klartext in der Firmware. Wer das Board in die Hände bekommt, kann den Flash über USB auslesen und alle Konten kopieren. Backup-Codes und einen zweiten Faktor woanders aufbewahren.</li><li>Keine PIN, keine Verschlüsselung, kein Secure Element. FIDO2 / U2F / WebAuthn werden nicht unterstützt.</li><li>Das Board hat keine Echtzeituhr: ohne WLAN nach einem Neustart keine Zeit — also keine gültigen Codes.</li></ul>`,
+            versionsTitle: 'Versionen',
+            versionsIntro: 'Beide Versionen werden bei jeder Änderung von GitHub Actions kompiliert.',
+            thVersion: 'Version', thDate: 'Datum', thChanges: 'Änderungen',
+            d2: '18. Mai 2024', c2: 'mehrere Konten und WLANs, Apps (Diagnostic, System, Reboot), Ruhemodus, Statusleiste oben, Verkabelung mit vier Tasten',
+            d1: '5. Mai 2024', c1: 'ein Konto, zwei Tasten + FLASH, Zeit manuell abgeglichen',
+            title: 'XenithOS — adm1nsys'
+          },
+          en: {
+            lead: 'A two-factor code generator (TOTP) on an ESP8266 board with a built-in 0.96″ OLED — the six-digit codes an authenticator app shows, on a small device with its own buttons, menu and status bar.',
+            download: 'Download the code',
+            flashBtn: 'Flashing',
+            meta: 'Arduino · C++ · ESP8266 · GPL-3.0',
+            photoAlt: 'XenithOS on the ESP8266 OLED board, System screen',
+            whatTitle: 'What it does',
+            photoCap: 'The System app: version, board and wiring',
+            whatBody: `<ul><li><strong>TOTP codes</strong> for as many accounts as fit into memory — each with its own name in the menu and a countdown until the code changes.</li><li><strong>Time over the network:</strong> connects to the first available of several Wi-Fi networks and syncs the clock over NTP — TOTP only works with the exact time.</li><li><strong>Status bar</strong> with a warning icon when Wi-Fi or the time sync fails.</li><li><strong>Apps</strong> in the same menu: <em>Diagnostic</em>, <em>System</em>, <em>Reboot</em> and <em>NO WAR</em> with links to Ukrainian aid funds.</li><li><strong>Sleep</strong> on a button press, a boot screen with progress — and a menu that is easy to extend with your own apps.</li></ul>`,
+            hwTitle: 'Hardware and wiring',
+            hwBody: 'The ESP8266 development board with a 0.96″ SSD1306 OLED (sold as “ideaspark” and under other names; ESP-12 module, Micro USB). Its pinout differs from a regular NodeMCU: the display sits on GPIO 12 (SDA) and GPIO 14 (SCL). Plus four push buttons, each between a pin and GND — the internal pull-ups are enough, no resistors needed.',
+            thPin: 'Pin (board label)', thButton: 'Button',
+            bUp: 'up in the menu / previous page', bDown: 'down in the menu / next page', bHome: 'home', bOpen: 'open / apply', bSleep: 'sleep / wake up',
+            hwNote: 'I avoided D0, D5, D6 and D8: on my board, buttons on them made the input unstable and left artifacts on the screen.',
+            flashTitle: 'Build and flash',
+            flashBody: `<ol><li>Install the <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener">Arduino IDE</a> and add the ESP8266 core: under <em>Settings → Additional boards manager URLs</em> enter <code>https://arduino.esp8266.com/stable/package_esp8266com_index.json</code>, then install <strong>esp8266</strong> in the Boards Manager.</li><li>Install the libraries: <strong>U8g2</strong>, <strong>NTPClient</strong>, <strong>Time</strong>, <strong>TOTP library</strong> (Luca Dentella) and <strong>Base32-Decode</strong>.</li><li>Open ${file('firmware/XenithOS/XenithOS.ino')}, enter your Wi-Fi networks and accounts (see below), choose the board <strong>NodeMCU 1.0 (ESP-12E Module)</strong> and the port, upload.</li></ol><p>Or on the command line:</p>`,
+            cfgTitle: 'Configuration',
+            cfgIntro: 'Everything is set in the sketch before flashing; the instructions are also in the comment block at the top of the file.',
+            cfgBody: `<ul><li>The secret is the text code a service shows next to the QR code when you set up two-factor login — without spaces, up to 32 characters.</li><li>The NTP server is <code>pool.ntp.org</code>; a second one is prepared as a comment.</li><li>Your own apps: add <code>{"Name", FunctionView}</code> to <code>additionalMenuItems</code> and write the function.</li></ul><p>That is also why there is no ready-made firmware download: Wi-Fi passwords and secrets are compiled in, so every firmware is personal.</p>`,
+            secTitle: 'Security',
+            secBody: `<p>A learning project, not a hardware security key:</p><ul><li>The secrets are compiled into the firmware in plain text. Anyone who gets the board can read the flash over USB and copy every account. Keep backup codes and a second factor elsewhere.</li><li>No PIN, no encryption, no secure element. FIDO2 / U2F / WebAuthn are not supported.</li><li>The board has no real-time clock: without Wi-Fi after a restart there is no time, so no valid codes.</li></ul>`,
+            versionsTitle: 'Versions',
+            versionsIntro: 'GitHub Actions compiles both versions on every change.',
+            thVersion: 'Version', thDate: 'Date', thChanges: 'Changes',
+            d2: '18 May 2024', c2: 'several accounts and Wi-Fi networks, apps (Diagnostic, System, Reboot), sleep, status bar at the top, four-button wiring',
+            d1: '5 May 2024', c1: 'one account, two buttons + FLASH, time synced manually',
+            title: 'XenithOS — adm1nsys'
+          }
+        }
+      };
+    </script>
+    <script src="/adm1nsys/kit/project.js"></script>
+  </body>
+</html>
