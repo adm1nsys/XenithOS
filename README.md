@@ -15,6 +15,8 @@ A two-factor code generator (TOTP) on an ESP8266 board with a built-in 0.96" OLE
 
 <img src="docs/img/board-menu.jpg" alt="XenithOS on the ESP8266 OLED board, System screen" width="420">
 
+> **Finished project.** XenithOS is complete and archived — no further development. Both versions are kept here with their source and firmware under [Releases](https://github.com/adm1nsys/XenithOS/releases).
+
 ## What it does
 
 - **TOTP codes** for as many accounts as fit into memory, each with its own name in the menu, and a countdown until the code changes
@@ -56,6 +58,12 @@ arduino-cli lib install U8g2 NTPClient Time "TOTP library" Base32-Decode
 arduino-cli compile --upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 firmware/XenithOS
 ```
 
+Ready firmware for NodeMCU 1.0 is attached to each [release](https://github.com/adm1nsys/XenithOS/releases). It is built from the sketch as it is in the repository, so it contains the example Wi-Fi networks and accounts — it shows the interface, and for your own codes you build it with your settings as above. To flash a `.bin`:
+
+```bash
+esptool.py --port /dev/ttyUSB0 write_flash 0x0 xenithos-esp8266.bin
+```
+
 ## Configuration
 
 Everything is set in the sketch before flashing; the instructions are also in the comment block at the top of the file.
@@ -84,10 +92,10 @@ This is a learning project, not a hardware security key:
 
 ## Versions
 
-| Version | Date | Changes |
-|---|---|---|
-| [Beta 2 RC](firmware/XenithOS/XenithOS.ino) | 18 May 2024 | several accounts and Wi-Fi networks, apps (Diagnostic, System, Reboot), sleep, status bar at the top, four-button wiring |
-| [Beta 1](firmware/beta-1/XenithOS/XenithOS.ino) | 5 May 2024 | one account, two buttons + FLASH, time synced manually |
+| Version | Date | Changes | Firmware |
+|---|---|---|---|
+| [Beta 2 RC](firmware/XenithOS/XenithOS.ino) | 18 May 2024 | several accounts and Wi-Fi networks, apps (Diagnostic, System, Reboot), sleep, status bar at the top, four-button wiring | [xenithos-esp8266.bin](https://github.com/adm1nsys/XenithOS/releases/download/beta-2-rc/xenithos-esp8266.bin) |
+| [Beta 1](firmware/beta-1/XenithOS/XenithOS.ino) | 5 May 2024 | one account, two buttons + FLASH, time synced manually | [xenithos-beta-1-esp8266.bin](https://github.com/adm1nsys/XenithOS/releases/download/beta-1/xenithos-beta-1-esp8266.bin) |
 
 ## License
 

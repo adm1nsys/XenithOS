@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Arduino IDE "Export Compiled Binary" output
+build/

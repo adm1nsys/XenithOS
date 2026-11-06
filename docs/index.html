@@ -101,8 +101,8 @@ arduino-cli compile --upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 fi
               <table>
                 <thead><tr><th data-i18n="thVersion"></th><th data-i18n="thDate"></th><th data-i18n="thChanges"></th><th></th></tr></thead>
                 <tbody>
-                  <tr><td><strong>Beta 2 RC</strong></td><td data-i18n="d2"></td><td data-i18n="c2"></td><td><a class="btn btn-sm" href="https://raw.githubusercontent.com/adm1nsys/XenithOS/main/firmware/XenithOS/XenithOS.ino" download="XenithOS.ino">XenithOS.ino</a></td></tr>
-                  <tr><td>Beta 1</td><td data-i18n="d1"></td><td data-i18n="c1"></td><td><a class="btn btn-sm" href="https://raw.githubusercontent.com/adm1nsys/XenithOS/main/firmware/beta-1/XenithOS/XenithOS.ino" download="XenithOS-beta-1.ino">XenithOS.ino</a></td></tr>
+                  <tr><td><strong>Beta 2 RC</strong></td><td data-i18n="d2"></td><td data-i18n="c2"></td><td><a class="btn btn-sm" href="https://raw.githubusercontent.com/adm1nsys/XenithOS/main/firmware/XenithOS/XenithOS.ino" download="XenithOS.ino">XenithOS.ino</a> <a class="btn btn-sm" href="https://github.com/adm1nsys/XenithOS/releases/download/beta-2-rc/xenithos-esp8266.bin">.bin</a></td></tr>
+                  <tr><td>Beta 1</td><td data-i18n="d1"></td><td data-i18n="c1"></td><td><a class="btn btn-sm" href="https://raw.githubusercontent.com/adm1nsys/XenithOS/main/firmware/beta-1/XenithOS/XenithOS.ino" download="XenithOS-beta-1.ino">XenithOS.ino</a> <a class="btn btn-sm" href="https://github.com/adm1nsys/XenithOS/releases/download/beta-1/xenithos-beta-1-esp8266.bin">.bin</a></td></tr>
                 </tbody>
               </table>
             </div>
@@ -123,7 +123,7 @@ arduino-cli compile --upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 fi
             lead: 'Ein Generator für Zwei-Faktor-Codes (TOTP) auf einem ESP8266-Board mit eingebautem 0,96″-OLED — die sechsstelligen Codes einer Authenticator-App, auf einem kleinen Gerät mit eigenen Tasten, Menü und Statusleiste.',
             download: 'Code herunterladen',
             flashBtn: 'Flashen',
-            meta: 'Arduino · C++ · ESP8266 · GPL-3.0',
+            meta: 'Arduino · C++ · ESP8266 · GPL-3.0 · archiviert',
             photoAlt: 'XenithOS auf dem ESP8266-OLED-Board, Bildschirm „System“',
             whatTitle: 'Was es kann',
             photoCap: 'Die App „System“: Version, Board und Verkabelung',
@@ -141,7 +141,7 @@ arduino-cli compile --upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 fi
             secTitle: 'Sicherheit',
             secBody: `<p>Ein Lernprojekt, kein Hardware-Sicherheitsschlüssel:</p><ul><li>Die Geheimnisse stehen im Klartext in der Firmware. Wer das Board in die Hände bekommt, kann den Flash über USB auslesen und alle Konten kopieren. Backup-Codes und einen zweiten Faktor woanders aufbewahren.</li><li>Keine PIN, keine Verschlüsselung, kein Secure Element. FIDO2 / U2F / WebAuthn werden nicht unterstützt.</li><li>Das Board hat keine Echtzeituhr: ohne WLAN nach einem Neustart keine Zeit — also keine gültigen Codes.</li></ul>`,
             versionsTitle: 'Versionen',
-            versionsIntro: 'Beide Versionen werden bei jeder Änderung von GitHub Actions kompiliert.',
+            versionsIntro: 'Das Projekt ist abgeschlossen und archiviert. Beide Versionen bleiben mit Quelltext und fertiger Firmware für NodeMCU 1.0 erhalten; die Firmware enthält die Beispiel-WLANs und -Konten aus dem Sketch — für eigene Codes mit eigenen Einstellungen kompilieren.',
             thVersion: 'Version', thDate: 'Datum', thChanges: 'Änderungen',
             d2: '18. Mai 2024', c2: 'mehrere Konten und WLANs, Apps (Diagnostic, System, Reboot), Ruhemodus, Statusleiste oben, Verkabelung mit vier Tasten',
             d1: '5. Mai 2024', c1: 'ein Konto, zwei Tasten + FLASH, Zeit manuell abgeglichen',
@@ -151,7 +151,7 @@ arduino-cli compile --upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 fi
             lead: 'A two-factor code generator (TOTP) on an ESP8266 board with a built-in 0.96″ OLED — the six-digit codes an authenticator app shows, on a small device with its own buttons, menu and status bar.',
             download: 'Download the code',
             flashBtn: 'Flashing',
-            meta: 'Arduino · C++ · ESP8266 · GPL-3.0',
+            meta: 'Arduino · C++ · ESP8266 · GPL-3.0 · archived',
             photoAlt: 'XenithOS on the ESP8266 OLED board, System screen',
             whatTitle: 'What it does',
             photoCap: 'The System app: version, board and wiring',
@@ -169,7 +169,7 @@ arduino-cli compile --upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 fi
             secTitle: 'Security',
             secBody: `<p>A learning project, not a hardware security key:</p><ul><li>The secrets are compiled into the firmware in plain text. Anyone who gets the board can read the flash over USB and copy every account. Keep backup codes and a second factor elsewhere.</li><li>No PIN, no encryption, no secure element. FIDO2 / U2F / WebAuthn are not supported.</li><li>The board has no real-time clock: without Wi-Fi after a restart there is no time, so no valid codes.</li></ul>`,
             versionsTitle: 'Versions',
-            versionsIntro: 'GitHub Actions compiles both versions on every change.',
+            versionsIntro: 'The project is finished and archived. Both versions stay here with their source and ready firmware for NodeMCU 1.0; the firmware contains the example Wi-Fi networks and accounts from the sketch — for your own codes, build it with your settings.',
             thVersion: 'Version', thDate: 'Date', thChanges: 'Changes',
             d2: '18 May 2024', c2: 'several accounts and Wi-Fi networks, apps (Diagnostic, System, Reboot), sleep, status bar at the top, four-button wiring',
             d1: '5 May 2024', c1: 'one account, two buttons + FLASH, time synced manually',
